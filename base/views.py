@@ -5,6 +5,10 @@ def inicio(request):
     return render(request,'inicio.html')
 
 def contato(request):
-    return render(request, 'contato.html')
+    contexto = {
+        'telefone': '(99) 9999.9999',
+        'responsavel': 'Mario da Silva'
+    } 
+    return render(request, 'contato.html', contexto)
 
 # Create your views here.
